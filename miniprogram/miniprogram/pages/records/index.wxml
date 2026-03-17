@@ -1,0 +1,37 @@
+<!--pages/records/index.wxml-->
+<view class="container">
+  <view class="header">
+    <text class="title">📋 学生打卡记录</text>
+    <text class="subtitle">实时接收 ESP32 数据</text>
+  </view>
+  
+  <!-- 刷新按钮 -->
+  <button class="refresh-btn" type="primary" size="mini" bindtap="loadRecords" loading="{{loading}}">
+    刷新数据
+  </button>
+  
+  <!-- 记录列表 -->
+  <view class="record-list">
+    <block wx:if="{{records.length > 0}}">
+      <view class="record-item" wx:for="{{records}}" wx:key="_id">
+        <view class="record-header">
+          <text class="name">{{item.name}}</text>
+          <text class="student-id">学号: {{item.studentId}}</text>
+        </view>
+        <view class="record-time">
+          <text>上传时间: {{item.formattedTime}}</text>
+        </view>
+      </view>
+    </block>
+    
+    <!-- 空状态 -->
+    <view class="empty" wx:else>
+      <text>暂无数据，请先上传</text>
+    </view>
+  </view>
+  
+  <!-- 统计信息 -->
+  <view class="footer" wx:if="{{records.length > 0}}">
+    <text>共 {{records.length}} 条记录</text>
+  </view>
+</view>

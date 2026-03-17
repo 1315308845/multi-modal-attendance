@@ -1,0 +1,56 @@
+# ============ 编译输出 ============
+Debug/
+Release/
+Objects/
+Listings/
+*.axf
+*.build_log.htm
+*.hex
+*.bin
+*.elf
+*.map
+*.o
+*.d
+*.crf
+*.htm
+*.dep
+
+# ============ IDE设置 ============
+# Keil MDK - 忽略个人配置，保留工程文件
+*.uvguix.*          # 用户界面配置（不同电脑不同）
+*.uvoptx            # 调试配置（含个人路径）
+*.uvopt             # 旧版兼容
+*.scvd              # 调试视图
+*.uvproj.*.bak      # 备份文件
+*.uvguix.*.bak      # 备份文件
+# ⚠️ 不要忽略 *.uvprojx！这是工程文件，必须提交
+
+# RTE 运行时环境（CubeMX 生成，可忽略）
+RTE/
+MDK-ARM/RTE/        # 双重保险，适配不同路径
+
+# CubeMX
+*.ioc.bak
+*.ioc~              # CubeMX 备份文件
+.mxproject
+
+# ============ 中间文件 ============
+*.orig
+*.log
+*.lst
+*.lnp
+*.iex
+*.sct
+*.signed.*
+
+# ============ 临时文件 ============
+*~
+*.swp
+*.swo
+*.tmp
+*.bak
+*.old
+
+# ============ 其他 ============
+.DS_Store
+Thumbs.db

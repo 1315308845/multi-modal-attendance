@@ -1,0 +1,12 @@
+{
+  "name": "111",
+  "version": "1.0.0",
+  "description": "接收并保存ESP32传来的数据",
+  "main": "index.js",
+  "scripts": {},
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "wx-server-sdk": "latest" 
+  }
+}

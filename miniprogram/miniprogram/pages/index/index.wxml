@@ -1,0 +1,17 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="title">ESP32 数据接收测试</view>
+  
+  <!-- 测试按钮 -->
+  <button type="primary" bindtap="testCloudFunction">测试云函数</button>
+  
+  <!-- 显示结果 -->
+  <view class="result" wx:if="{{testResult}}">
+    测试结果：{{testResult}}
+  </view>
+  
+  <!-- 说明文字 -->
+  <view class="tips">
+    点击按钮测试数据上传功能
+  </view>
+</view>

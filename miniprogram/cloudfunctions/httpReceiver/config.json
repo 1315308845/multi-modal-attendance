@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "openapi": []
+  },
+  "triggers": [
+    {
+      "name": "httpTrigger",
+      "type": "http",
+      "config": {
+        "auth": "none",      
+        "methods": ["GET", "POST"]
+      }
+    }
+  ]
+}
